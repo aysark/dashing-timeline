@@ -37,7 +37,7 @@ SCHEDULER.every '6h', :first_in => 0 do |job|
       }
     end
 
-    send_event("ags_timeline", {events: events})
+    send_event("a_timeline", {events: events})
   else
     puts "No events found :("
   end
