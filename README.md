@@ -12,6 +12,11 @@ Copy all the above files (except preview.png) and paste into corresponding locat
 </li>
 ```
 
+Also we use moment.js for date formating, so be sure to include it in your layout.erb;
+```html
+<script type="text/javascript" src="/assets/moment.min.js"></script>
+```
+
 # Configure
 Unless you want to look exactly like in the preview, you will probably want to configure the positioning and layout of the timeline chart.  This is done in the timeknots.js file.  You can also have it in horizontal mode.  
 
