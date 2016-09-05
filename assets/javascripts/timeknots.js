@@ -1,7 +1,7 @@
 var TimeKnots = {
     draw: function(id, events, options) {
         // remove any exisitng elements
-        d3.select(id).html("");
+        d3.select(id).select("div").html("");
 
         var TODAY = Date.now();
         var cfg = {
@@ -32,7 +32,7 @@ var TimeKnots = {
                 name: cfg.addNowLabel || "Today"
             });
         }
-        var svg = d3.select(id).append('svg').attr("width", cfg.width).attr("height", cfg.height);
+        var svg = d3.select(id).select("div").append('svg').attr("width", cfg.width).attr("height", cfg.height);
         //Calculate times in terms of timestamps
         if (!cfg.dateDimension) {
             var timestamps = events.map(function(d) {
