@@ -32,6 +32,10 @@ var TimeKnots = {
                 name: cfg.addNowLabel || "Today"
             });
         }
+        //sort events ascending
+        events.sort(function(a,b){
+          return new Date(a.date) - new Date(b.date);
+        });
         var svg = d3.select(id).select("div").append('svg').attr("width", cfg.width).attr("height", cfg.height);
         //Calculate times in terms of timestamps
         if (!cfg.dateDimension) {
